@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.red{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<p class="massage"></p>
+	<button>up</button>
+	<button>down</button>
+	<ul class="wrap">
+		<li class="red">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+
+	<script>
+	
+		document.getElementsByTagName('button')[1].addEventListener('click', function () {
+			var a = document.getElementsByClassName('red')[0];
+				
+				if(a.nextElementSibling != null){
+				a.classList.remove('red');
+				a.nextElementSibling.classList.add('red');
+			
+			} else {
+				document.getElementsByTagName('p')[0].innerHTML = 'next el empty';
+				return false;
+			}		
+		});
+		document.getElementsByTagName('button')[0].addEventListener('click', function () {
+			var a = document.getElementsByClassName('red')[0];
+				
+				if(a.previousElementSibling != null){
+				a.classList.remove('red');
+				a.previousElementSibling.classList.add('red');
+			
+			} else {
+				document.getElementsByTagName('p')[0].innerHTML = 'prev el empty';
+				return false;
+			}		
+		});
+
+		
+	</script>
+</body>
+</html>

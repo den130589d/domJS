@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.content{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<button>Show/Hide</button>
+	<div class="spoiler">
+	 	<p class="header">Title</p>
+	 	<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni illo tempore iste magnam, ut non mollitia itaque! Repellendus eius minus quae officiis qui repudiandae blanditiis libero, officia sequi beatae eaque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates accusantium, recusandae vero dignissimos quam quae velit mollitia. Adipisci error, aliquid totam repellat perferendis quae, at, et eligendi facere quis ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quia adipisci pariatur, facere itaque corporis, velit hic! Error quis, recusandae doloremque voluptate quia ipsum perspiciatis deserunt quo non distinctio earum?</p>
+	 </div>
+
+	 <script>
+	 	document.getElementsByTagName('button')[0].addEventListener('click', function () {
+	 		document.getElementsByTagName('p')[1].classList.toggle('content');
+	 	})
+	 </script> 
+</body>
+</html>
